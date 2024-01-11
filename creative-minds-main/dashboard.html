@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script
+      type="text/javascript"
+      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+    <script src="https://kit.fontawesome.com/5142521350.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/smartblock@1.3.2/css/smartblock.css" />
+<script src="https://unpkg.com/smartblock@1.3.2/dist/editor.js"></script>
+<script src="https://unpkg.com/smartblock@1.3.2/dist/extensions.js"></script>
+<script src="https://unpkg.com/smartblock@1.3.2/dist/customblock.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <title>Creative Minds</title>
+  </head>
+  <body>
+   <span id="edit">
+    <div class="layout ">
+      <div class="sidebar Borders ">
+        <div class="SidebarHeader-logo Borders">
+          <a href=""><img id="logoPreview" src=""  /></a>
+          <label for="logoUpload">
+            <img class="edit-icon" src="image/editicon.svg" />
+          </label>
+        </div>
+       
+        <!-- <div class="Sidebar_menu" id="sortable">
+          <div class="sidebar_item" id="duplicate">Introduction</div>
+          <div class="sidebar_item">Logo</div>
+          <div class="sidebar_item">Typography</div>
+          <div class="sidebar_item">Color palette</div>
+        </div> -->
+        <ul id="sortable" class="Sidebar_menu">
+          <li class="sidebar_item Borders" data-arrange="1" type="button"
+          name="Intro_btn"
+          class="sidebar_button"
+          onclick="Show_Intro()"
+          >
+          <i class="fa-solid fa-arrow-up"><i class="fa-solid fa-arrow-down"></i></i> Introduction
+          </li>
+          <li class="sidebar_item Borders" data-arrange="2"  type="button"
+          name="Color_btn"
+          class="sidebar_button"
+          onclick="Show_Color()">
+          <i class="fa-solid fa-arrow-up"><i class="fa-solid fa-arrow-down"></i></i>Color palette
+          </li>
+          <li class="sidebar_item Borders" data-arrange="3" onclick="Show_typography()"><i class="fa-solid fa-arrow-up"><i class="fa-solid fa-arrow-down"></i></i>Typography</li>
+          <li class="sidebar_item Borders" data-arrange="4"><i class="fa-solid fa-arrow-up"><i class="fa-solid fa-arrow-down"></i></i>Downloads</li>
+        </ul>
+        <div class="sidebar_item Borders" id="duplicate" contenteditable>
+           Demo
+        </div>
+        <div
+          class="sidebarduplicate Borders"
+          id="copy"
+          value="Make Copy"
+          onclick="copy()"
+        >
+          +
+        </div>
+        <div class="sidebarbtns">
+          <button  class="button-7 removebtn"  onclick="myFunction()">Remove</button>
+          <button class="applybtn button-7" onclick="dragdrop()" ondblclick="saveChanges()">Apply</button>
+        </div>
+        
+      </div>
+
+      <div class="container">
+        <header class="Header Borders">
+          <h1>Dashboard</h1>
+          
+          <div  id="google_translate_element" class="google-translate"></div>
+        </header>
+        <input type="file" id="logoUpload" />
+        
+        <div class="hover-container">
+          <p class="hover-target" tabindex="0"><i class="fas fa-question-circle"></i></p>
+          <aside class="hover-popup">
+            <h2>Information Bubble</h2>
+            <p>Click edit icon near logo to change the logo, the sidebar items canbe sorted by dragging up and down, click on demo to change the menu item name, click the plus icon to add a new sidebar element and click remove button to remove it, click apply to save all the changes</p>
+          </aside>
+        </div>
+        
+        <div id="fontchange">
+          <!-- <input type="file" id="imageUpload"/>
+          <img id="imagePreview" src="" /> -->
+          <select class="effect-8" id="selecth1FontFamily" >
+            <option>Georgia</option>
+            <option>Palatino Linotype</option>
+            <option>Book Antiqua</option>
+            <option>Times New Roman</option>
+            <option>Arial</option>
+            <option>Helvetica</option>
+            <option>Arial Black</option>
+            <option>Impact</option>
+            <option>Lucida Sans Unicode</option>
+            <option>Tahoma</option>
+            <option>Verdana</option>
+            <option>Courier New</option>
+            <option>Lucida Console</option>
+            <option> Trebuchet MS </option>
+            <option>Brush Script MT </option>
+            <option>Luminari </option>
+            <option> Comic Sans MS </option>
+            <option>sans-serif</option>
+          
+          </select>
+          <button class="button-7" onclick="changeFunc()">save Font</button>  
+
+
+        </div>
+
+        <div class="content Introduction introdash">
+          <div class="intro">
+            <h1 id="introtext">Intro Header</h1>
+            <div>Font Size</div>
+            <input class="effect-8" type="text" id="input" placeholder="Font Size"/>
+            <input
+              type="button"
+              onclick="changeTextSize()"
+              value="Save Font Size"
+              class="button-7" 
+            />
+            <input class="effect-8" type="text" id="head" name="head"  placeholder="Intro Header"  />
+            
+            
+            <h1 id="intropara">Intro Paragraph</h1>
+            <div>Font Size</div>
+            <input class="effect-8" type="text" id="inputp" placeholder="Font Size" />
+            <input
+            class="button-7" 
+              type="button"
+              onclick="changeTextSizep()"
+              value="Save Font Size"
+            />
+            <input class="effect-8" type="text" id="para" name="para"  placeholder="Intro Paragraph"  />
+            <input  class="button-7" type="submit" onclick="handleSubmit()" />
+            
+          </div>
+        </div>
+         
+    
+
+          <div class="hidden ColorPallete">
+            <h1 class="Title Title1">Color Palette</h1>
+            <div class="colorinput">
+            <select class="effect-8" name="selector" id="Selector" class="selector">
+              <option value="Pallete_1">Palette 1</option>
+              <option value="Pallete_2">Palette 2</option>
+              <option value="Pallete_3">Palette 3</option>
+              <option value="Pallete_4">Palette 4</option>
+              <option value="Pallete_5">Palette 5</option>
+              <option value="Pallete_6">Palette 6</option>
+              <option value="Background">Background</option>
+              <option value="Font">Font</option>
+              <option value="Title">Title</option>
+              <option value="Header">Header</option>
+              <option value="Border Left">Border Left</option>
+              <option value="Border Right">Border Right</option>
+              <option value="Border Top">Border Top</option>
+              <option value="Border Bottom">Border Bottom</option>
+            </select>
+            <input class="effect-8" type="text" id="color_input" name="" value="" />
+            <input  type="color" id="color_input_2" name="" value="" />
+            <button
+            class="button-7"
+              type="button"
+              name="button"
+              id="Change_btn"
+              onclick="Change_Color()"
+            >
+              Change Color
+            </button>
+          </div>
+          <div class="coloritslf">
+            <div class="Colors Color_1">
+              <h4 class="Text1">Pallete 1</h4>
+            </div>
+            <div class="Colors Color_2">
+              <h4 class="Text1">Pallete 2</h4>
+            </div>
+            <div class="Colors Color_3">
+              <h4 class="Text1">Pallete 3</h4>
+            </div>
+            <div class="Colors Color_4">
+              <h4 class="Text1">Pallete 4</h4>
+            </div>
+            <div class="Colors Color_5">
+              <h4 class="Text1">Pallete 5</h4>
+            </div>
+            <div class="Colors Color_6">
+              <h4 class="Text1">Pallete 6</h4>
+            </div>
+          </div>
+          
+         </div>
+         
+       
+
+          <div id="app" class="Title1" >
+          </div>
+          <button class="button-7" id="app1" onclick="app()">Save Changes</button>
+
+          <div class="previewbarndguide button-7"><a href="index.html">Preview brand guide</a></div>
+
+
+        <footer class="footer"></footer>
+      </div>
+    </div>
+   </span>
+
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          { pageLanguage: "en", includedLanguages: "en,nl" },
+          "google_translate_element"
+        );
+      }
+    </script>
+
+    <script></script>
+
+    <script src="main.js"></script>
+    <script src="index.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
