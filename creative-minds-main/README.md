@@ -1,18 +1,17 @@
-# Creative minds tool
+## Creative Minds tool
 
 Description:
-It’s a tool used to create a brand style guide without a help of a web developer, every 
-element of the brand guide is editable
+It’s a tool used to create a brand style guide without the help of a web developer, every element of the brand guide is editable.
 
 ## Installation
 
-open the pages with live server
-The changes cannot be viewed in a different PC, the data is stored in the Local Storage
+Open the pages with live server.
+The changes cannot be viewed on a different PC, the data is stored on the Local Storage.
 
 ## Roadmap
 
 * Dynamic menu
-* connecting it to a database
+* Connecting it to a database
 * Adding custom fonts
 * Multiple users
 
@@ -30,18 +29,18 @@ Project is created with:
 
 If you have a suggestion that would make this tool better, please fork the repo and create a pull request.
 
-Fork the Project
-Create your Feature Branch (git checkout -b feature/NewFeature)
-Commit your Changes (git commit -m 'Add some NewFeature')
-Push to the Branch (git push origin feature/NewFeature)
-Open a Pull Request
+- Fork the Project
+- Create your Feature Branch (git checkout -b feature/NewFeature)
+- Commit your Changes (git commit -m 'Add some NewFeature')
+- Push to the Branch (git push origin feature/NewFeature)
+- Open a Pull Request
 
 
 ## Credits
 ## Developers
 * Prakasa
 * Daan
-* Andrae
+* Andrei
 * Diyar
 
 Resources:
