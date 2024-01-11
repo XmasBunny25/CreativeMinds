@@ -36,13 +36,6 @@ If you have a suggestion that would make this tool better, please fork the repo 
 - Open a Pull Request
 
 
-## Credits
-## Developers
-* Prakasa
-* Daan
-* Andrei
-* Diyar
-
 Resources:
 http://www.java2s.com/example/javascript/jquery/change-the-font-size-with-aninput-type-number.html
 https://jqueryui.com/sortable/
